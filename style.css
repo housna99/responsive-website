@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+button {
+  font-family: "Poppins", sans-serif;
+}
+header {
+  display: flex;
+  /*background-color: lightsalmon;*/
+  width: 90%;
+  margin: auto;
+  height: 5rem;
+  align-items: center;
+}
+.logo-container,
+.nav-links,
+.cart {
+  display: flex;
+}
+.logo-container {
+  /*background-color: lightcoral;*/
+  flex: 1;
+}
+.logo {
+  font-size: medium;
+  margin: 1.2rem;
+}
+nav {
+  /*background-color: lightseagreen;*/
+  flex: 2;
+}
+.nav-links {
+  justify-content: space-around;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #5f5f79;
+  font-size: 16px;
+}
+.cart {
+  /*background-color: lightgreen;*/
+  flex: 1;
+  justify-content: flex-end;
+}
+.cover img {
+  height: 70vh;
+  flex: 1;
+  filter: drop-shadow(0px 5px 3px black);
+  animation: drop 1.5s ease;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 90vh;
+}
+.introduction {
+  /*background-color: lightcoral;*/
+  flex: 1;
+}
+.intro-txt h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+}
+.intro-txt p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #585772;
+}
+
+.cta {
+  padding: 80px 0px 0px 0px;
+}
+.cta-select {
+  border: 3px solid #c36cbb;
+  background: transparent;
+  color: #c36cbb;
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+  font-size: medium;
+}
+.cta-add {
+  border: 3px solid #c36cbb;
+  background: #c36cbb;
+  color: white;
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+  font-size: medium;
+  margin-top: 2.2rem;
+}
+.med-circle {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  opacity: 0.6;
+  z-index: -1; /*kinda zoom to the back*/
+}
+.big-circle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  opacity: 0.5;
+  height: 90%;
+  z-index: -1; /*kinda zoom to the back*/
+}
+.small-circle {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  z-index: -1; /*kinda zoom to the back*/
+}
+.laptop {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 15%;
+}
+
+/*animation the name is drop*/
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .presentation {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .introduction {
+    text-align: center;
+  }
+  .intro-txt h1 {
+    font-size: 30px;
+  }
+  .intro-txt p {
+    font-size: 18px;
+  }
+  .cta {
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .laptop {
+    right: 43%;
+  }
+}
